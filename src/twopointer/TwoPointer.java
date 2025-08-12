@@ -1,5 +1,5 @@
 package twopointer;
-/*
+
 public class TwoPointer {
  public static void main(String[] args) {
 	String input = "101010";
@@ -29,33 +29,9 @@ public class TwoPointer {
 	}
 	System.out.println(new String(ch));
 }
-}*/
-
-public class TwoPointer {
-	 public static void main(String[] args) {
-		String input = "101010";
-		
-		char[]ch = input.toCharArray();
-		int left = 0;
-		int right = ch.length - 1;
-		
-		while(left < right) {
-			if(ch[left] == '0') {
-				left++;
-			}else if(ch[right] == '1') {
-				right--;
-			}else {
-				char temp = ch[left];
-				ch[left] = ch[right];
-				ch[right] = temp;
-				left++;
-				right--;
-			}
-		}
-		
-		System.out.println(new String(ch));
-	 }
 }
+
+
 
 
 
